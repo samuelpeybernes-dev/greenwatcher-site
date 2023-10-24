@@ -1,5 +1,5 @@
 <template>
-    <div class="font-sans antialiased" id="app">
+    <header class="font-sans antialiased " id="app">
         <nav class="flex items-center justify-between flex-wrap bg-[#5cbc9d] p-6">
             <div class="flex items-center flex-no-shrink text-white mx-auto">
                 <img src="../assets/logo.png" class="w-9 mr-4" alt="">
@@ -16,7 +16,7 @@
             </div>
 
         </nav>
-    </div>
+    </header>
 </template>
 
 <script >
