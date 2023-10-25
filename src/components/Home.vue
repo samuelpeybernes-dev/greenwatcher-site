@@ -51,7 +51,7 @@ export default {
 
   methods: {
     changeImage() {
-      if (this.footprint >= 0 && this.footprint < 0.250) {
+      if (this.footprint >= 0 && this.footprint < 250) {
         return { image: "/logo_green.png", color: "green" };
       } else if (this.footprint >= 250 && this.footprint < 500) {
         return { image: "/logo_yellow.png", color: "yellow" };
