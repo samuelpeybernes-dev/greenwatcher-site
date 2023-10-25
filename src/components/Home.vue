@@ -1,12 +1,23 @@
 <template>
   <div class="h-[700px]">
-    <h1>Données</h1>
+    <p>Nombres de requetes: {{ nbrRequest }}</p>
+    <p>Taille des requetes: {{ requestSize }}</p>
+
   </div>
 </template>
   
 <script >
 export default {
-
+  data() {
+    return {
+      nbrRequest: null,
+      requestSize: null
+    };
+  },
+  created() {
+    this.nbrRequest = this.$route.query.nbrRequest;
+    this.requestSize = this.$route.query.requestSize;
+  }
 }
 
 
