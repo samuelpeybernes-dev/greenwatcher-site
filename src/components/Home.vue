@@ -21,9 +21,9 @@
 export default {
   data() {
     return {
-      nbrRequest: localStorage.getItem("nbrRequest"),
-      requestSize: localStorage.getItem("requestSize"),
-      requestTime: localStorage.getItem("requestTime"),
+      nbrRequest: localStorage.getItem("nbrRequest") || 0,
+      requestSize: localStorage.getItem("requestSize") || 0,
+      requestTime: localStorage.getItem("requestTime") || 0,
     };
   },
   created() {
