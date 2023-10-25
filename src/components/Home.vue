@@ -53,11 +53,11 @@ export default {
     changeImage() {
       if (this.footprint >= 0 && this.footprint < 0.250) {
         return { image: "/logo_green.png", color: "green" };
-      } else if (this.footprint >= 0.250 && this.footprint < 0.500) {
+      } else if (this.footprint >= 250 && this.footprint < 500) {
         return { image: "/logo_yellow.png", color: "yellow" };
-      } else if (this.footprint >= 0.500 && this.footprint < 0.750) {
+      } else if (this.footprint >= 500 && this.footprint < 750) {
         return { image: "/logo_orange.png", color: "orange" };
-      } else if (this.footprint >= 0.750) {
+      } else if (this.footprint >= 750) {
         return { image: "/logo_red.png", color: "red" };
       } else {
         return { image: "/logo_grey.png", color: "grey" };
