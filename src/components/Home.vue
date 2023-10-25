@@ -2,7 +2,7 @@
   <div class="h-[700px]">
     <p>Nombres de requetes: {{ nbrRequest }}</p>
     <p>Taille des requetes: {{ requestSize }}</p>
-    <img class="mx-auto w-25" :src="changeImage().image" alt="Logo" />
+    <img class="mx-auto w-25" :src="'src/assets/' + changeImage().image" alt="Logo" />
     <div class="relative group mt-8 mx-10">
       <div
         :class="'w-50 absolute -inset-1 bg-' + this.changeImage().color + ' bg-animate p-10 rounded-full filter blur-lg sm:mx-auto'" />
@@ -42,15 +42,15 @@ export default {
   methods: {
     changeImage() {
       if (this.nbrRequest > 0 && this.nbrRequest < 25) {
-        return { image: "../assets/logo_green.png", color: "green" };
+        return { image: "logo_green.png", color: "green" };
       } else if (this.nbrRequest >= 25 && this.nbrRequest < 50) {
-        return { image: "../assets/logo_yellow.png", color: "yellow" };
+        return { image: "logo_yellow.png", color: "yellow" };
       } else if (this.nbrRequest >= 50 && this.nbrRequest < 75) {
-        return { image: "../assets/logo_orange.png", color: "orange" };
+        return { image: "logo_orange.png", color: "orange" };
       } else if (this.nbrRequest >= 75) {
-        return { image: "../assets/logo_red.png", color: "red" };
+        return { image: "logo_red.png", color: "red" };
       } else {
-        return { image: "../assets/logo_grey.png", color: "grey" };
+        return { image: "logo_grey.png", color: "grey" };
       }
     },
   },
