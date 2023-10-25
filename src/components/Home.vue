@@ -42,15 +42,15 @@ export default {
   methods: {
     changeImage() {
       if (this.nbrRequest > 0 && this.nbrRequest < 25) {
-        return { image: "/src/assets/logo_green.png", color: "green" };
+        return { image: "../assets/logo_green.png", color: "green" };
       } else if (this.nbrRequest >= 25 && this.nbrRequest < 50) {
-        return { image: "/src/assets/logo_yellow.png", color: "yellow" };
+        return { image: "../assets/logo_yellow.png", color: "yellow" };
       } else if (this.nbrRequest >= 50 && this.nbrRequest < 75) {
-        return { image: "/src/assets/logo_orange.png", color: "orange" };
+        return { image: "../assets/logo_orange.png", color: "orange" };
       } else if (this.nbrRequest >= 75) {
-        return { image: "/src/assets/logo_red.png", color: "red" };
+        return { image: "../assets/logo_red.png", color: "red" };
       } else {
-        return { image: "/src/assets/logo_grey.png", color: "grey" };
+        return { image: "../assets/logo_grey.png", color: "grey" };
       }
     },
   },
