@@ -1,5 +1,6 @@
 <template>
     <div class="text-center">
+
         <v-btn color="#5cbc9d" class="text-white" @click="dialog = true">
             Voir l'équivalence
         </v-btn>
@@ -13,31 +14,31 @@
                             <div class="rounded-2xl	circle top_center">
                                 <img class="w-10"
                                     src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f697.svg" alt="">
-                                <p>{{ this.car }} km en voiture</p>
+                                <p>{{ (this.footprint * 4.5).toFixed(2) }} km en voiture</p>
                                 <div class="border"></div>
                             </div>
 
                             <div class="rounded-2xl	circle right_top show_circle"><img class="w-10"
                                     src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4a7.svg" alt="">
-                                <p>{{ this.water }} L d'eau</p>
+                                <p>{{ (this.footprint * 3.7).toFixed(3) }} L d'eau</p>
                                 <div class="border"></div>
                             </div>
 
                             <div class="rounded-2xl	circle right_bottom"><img class="w-10"
                                     src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f969.svg" alt="">
-                                <p>{{ this.meat }} kg de viande</p>
+                                <p>{{ (this.footprint * 0.138).toFixed(3) }} kg de viande</p>
                                 <div class="border"></div>
                             </div>
 
                             <div class="rounded-2xl	circle left_bottom"><img class="w-10"
-                                    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f456.svg" alt="">
-                                <p>{{ this.jean }} jeans</p>
+                                    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2709.svg" alt="">
+                                <p>{{ Math.round((this.footprint * 406).toFixed(1)) }} mails</p>
                                 <div class="border"></div>
                             </div>
 
                             <div class="rounded-2xl	circle left_top"><img class="w-10"
                                     src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f685.svg" alt="">
-                                <p>{{ this.train }} km en train</p>
+                                <p>{{ Math.round((this.footprint * 424).toFixed(1)) }} km en train</p>
                                 <div class="border"></div>
                             </div>
                             <h1
