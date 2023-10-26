@@ -1,38 +1,45 @@
 <template>
     <div class="text-center">
-        <v-btn color="primary" @click="dialog = true">
+        <v-btn color="#5cbc9d" class="text-white" @click="dialog = true">
             Voir l'équivalence
         </v-btn>
 
-        <v-dialog v-model="dialog" width="auto">
+        <v-dialog v-model="dialog" width="40%">
             <v-card>
                 <v-card-text>
                     <section id="Séminaires">
                         <article class="big_circle">
 
-                            <div class="circle top_center"><i class="fas fa-hands-helping 1 i_animated"></i>
+                            <div class="rounded-2xl	circle top_center"><img class="w-10"
+                                    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f697.svg" alt="">
                                 <div class="border"></div>
                             </div>
 
-                            <div class="circle right_top show_circle"><i class="fas fa-users 2"></i>
+                            <div class="rounded-2xl	circle right_top show_circle"><img class="w-10"
+                                    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4a7.svg" alt="">
                                 <div class="border"></div>
                             </div>
 
-                            <div class="circle right_bottom"><i class="fas fa-user-plus 3 i_animated"></i>
+                            <div class="rounded-2xl	circle right_bottom"><img class="w-10"
+                                    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f969.svg" alt="">
                                 <div class="border"></div>
                             </div>
 
-                            <div class="circle left_bottom"><i class="fas fa-thumbs-up 4 i_animated"></i>
+                            <div class="rounded-2xl	circle left_bottom"><img class="w-10"
+                                    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f456.svg" alt="">
                                 <div class="border"></div>
                             </div>
 
-                            <div class="circle left_top"><i class="fas fa-question 5 i_animated"></i>
+                            <div class="rounded-2xl	circle left_top"><img class="w-10"
+                                    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f685.svg" alt="">
                                 <div class="border"></div>
                             </div>
-
-                            <h3 class="flex items-center h-full justify-center	">{{ footprint }} de C0<span
-                                    style="    vertical-align: -9px;font-size: 70%;">2</span></h3>
-
+                            <h1
+                                class="flex items-center h-full justify-center text-center mb-4 text-1xl font-extrabold leading-none tracking-tight text-gray-900 md:text-2xl lg:text-2xl dark:text-black">
+                                <span class="contents text-[#8d6c9f]">{{ footprint }}</span> de C0<span
+                                    style="display: contents;vertical-align: -20px;font-size: 70%;">2</span> <br> correspond
+                                à
+                            </h1>
 
                         </article>
                     </section>
@@ -56,7 +63,42 @@ export default {
     data() {
         return {
             dialog: false,
+            car: 0,
+            train: 0,
+            jean: 0,
+            meat: 0,
+            water: 0,
         }
+    },
+
+    methods: {
+        footprintConversion() {
+            if (this.footprint >= 0 && this.footprint < 25) {
+                this.car = 1.2;
+                this.train = 106;
+                this.jean = 0.01;
+                this.meat = 0.03;
+                this.water = 0.9;
+            } else if (this.footprint >= 25 && this.footprint < 50) {
+                this.car = 1.2;
+                this.train = 106;
+                this.jean = 0.01;
+                this.meat = 0.03;
+                this.water = 0.9;
+            } else if (this.footprint >= 50 && this.footprint < 75) {
+                this.car = 1.2;
+                this.train = 106;
+                this.jean = 0.01;
+                this.meat = 0.03;
+                this.water = 0.9;
+            } else if (this.footprint >= 75) {
+                this.car = 1.2;
+                this.train = 106;
+                this.jean = 0.01;
+                this.meat = 0.03;
+                this.water = 0.9;
+            }
+        },
     },
 
 }
@@ -100,8 +142,7 @@ export default {
     align-items: center;
     width: 90px;
     height: 90px;
-    background: #1F2021;
-    border-radius: 100%;
+    background: #EFF4F9;
     transition: 0.3s;
     transition-delay: 0.2s;
 }
@@ -109,10 +150,10 @@ export default {
 #Séminaires .big_circle {
     position: relative;
     display: block;
-    margin: 5% 0;
-    width: 35vw;
-    height: 35vw;
-    border: black 4px solid;
+    margin: 5% auto;
+    width: 25vw;
+    height: 25vw;
+    border: #8d6c9f 2px solid;
     border-radius: 100%;
 }
 </style>

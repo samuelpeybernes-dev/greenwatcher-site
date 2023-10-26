@@ -8,7 +8,7 @@
       de
       données
     </h1>
-    <conversionPopup :footprint="footprint" />
+    <!-- <conversionPopup :footprint="footprint" /> -->
     <div class="relative group mt-8 mx-10 w-9/12">
       <div
         :class="'w-9/12 absolute -inset-1 bg-' + this.changeImage().color + ' bg-animate p-10 rounded-full filter blur-lg sm:mx-auto'" />
@@ -58,13 +58,13 @@ export default {
 
   methods: {
     changeImage() {
-      if (this.footprint >= 0 && this.footprint < 250) {
+      if (this.footprint >= 0 && this.footprint < 25) {
         return { image: "/logo_green.png", color: "green" };
-      } else if (this.footprint >= 250 && this.footprint < 500) {
+      } else if (this.footprint >= 25 && this.footprint < 50) {
         return { image: "/logo_yellow.png", color: "yellow" };
-      } else if (this.footprint >= 500 && this.footprint < 750) {
+      } else if (this.footprint >= 50 && this.footprint < 75) {
         return { image: "/logo_orange.png", color: "orange" };
-      } else if (this.footprint >= 750) {
+      } else if (this.footprint >= 75) {
         return { image: "/logo_red.png", color: "red" };
       } else {
         return { image: "/logo_grey.png", color: "grey" };
