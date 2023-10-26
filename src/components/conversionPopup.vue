@@ -20,7 +20,7 @@
 
                             <div class="rounded-2xl	circle right_top show_circle"><img class="w-10"
                                     src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4a7.svg" alt="">
-                                <p>{{ (this.footprint * 3.7).toFixed(3) }} L d'eau</p>
+                                <p>{{ (this.footprint * 3.7).toFixed(2) }} L d'eau</p>
                                 <div class="border"></div>
                             </div>
 
@@ -35,7 +35,6 @@
                                 <p>{{ Math.round((this.footprint * 406).toFixed(1)) }} mails</p>
                                 <div class="border"></div>
                             </div>
-
                             <div class="rounded-2xl	circle left_top"><img class="w-10"
                                     src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f685.svg" alt="">
                                 <p>{{ Math.round((this.footprint * 424).toFixed(1)) }} km en train</p>
@@ -74,46 +73,9 @@ export default {
     data() {
         return {
             dialog: false,
-            car: 0,
-            train: 0,
-            jean: 0,
-            meat: 0,
-            water: 0,
         }
     },
 
-    methods: {
-        footprintConversion() {
-            if (this.footprint >= 0 && this.footprint < 25) {
-                this.car = 1.2;
-                this.train = 106;
-                this.jean = 0.01;
-                this.meat = 0.03;
-                this.water = 0.9;
-            } else if (this.footprint >= 25 && this.footprint < 50) {
-                this.car = 2.3;
-                this.train = 212;
-                this.jean = 0.02;
-                this.meat = 0.07;
-                this.water = 1.9;
-            } else if (this.footprint >= 50 && this.footprint < 75) {
-                this.car = 3.5;
-                this.train = 318;
-                this.jean = 0.03;
-                this.meat = 0.1;
-                this.water = 2.8;
-            } else if (this.footprint >= 75) {
-                this.car = 4.6;
-                this.train = 424;
-                this.jean = 0.04;
-                this.meat = 0.1;
-                this.water = 3.7;
-            }
-        },
-    },
-    created() {
-        this.footprintConversion();
-    },
 
 }
 </script>
