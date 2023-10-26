@@ -1,6 +1,6 @@
 <template>
     <header class="font-sans antialiased " id="app">
-        <nav class="flex items-center justify-between flex-wrap bg-[#5cbc9d] p-6">
+        <nav class="flex items-center justify-between flex-wrap bg-[#5cbc9d] p-6 h-100">
             <div class="flex items-center flex-no-shrink text-white mx-auto">
                 <img src="../assets/logo.png" class="w-9 mr-4" alt="">
                 <span class="font-[Poppins] font-bold text-xl tracking-tight">GreenWatcher</span>

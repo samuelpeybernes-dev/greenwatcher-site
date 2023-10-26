@@ -1,9 +1,10 @@
 <template>
-  <div id="app">
-    <navbar />
-    <router-view />
-    <foooter />
-  </div>
+  <navbar style="height: 12%;" />
+  <router-view style="height: 80%; display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;" />
+  <foooter style="height: 8%;" />
 </template>
 
 <script >

@@ -1,17 +1,19 @@
 <template>
-  <div class="pt-4">
+  <div class="pt-4 align-middle">
     <img class="mx-auto w-25" :src="changeImage().image" alt="Logo" />
     <h1
       class="text-center mb-4 text-1xl font-extrabold leading-none tracking-tight text-gray-900 md:text-2xl lg:text-2xl dark:text-black">
-      Vous avez déclenché <span class="text-blue-600 dark:text-blue-500">{{ nbrRequest }}</span> requêtes ce qui
-      représente <span class="text-blue-600 dark:text-blue-500">{{ requestSize }}</span> {{ requestSizeUnit }} de données
+      Vous avez déclenché <span class="text-[#8d6c9f]  dark:text-[#8d6c9f]">{{ nbrRequest }}</span> requêtes ce qui
+      représente <span class="text-[#8d6c9f] dark:text-[#8d6c9f]-500">{{ requestSize }}</span> {{ requestSizeUnit }}
+      de
+      données
     </h1>
-    <div class="relative group mt-8 mx-10">
+    <div class="relative group mt-8 mx-10 w-9/12">
       <div
         :class="'w-9/12 absolute -inset-1 bg-' + this.changeImage().color + ' bg-animate p-10 rounded-full filter blur-lg sm:mx-auto'" />
       <div
         class="mx-auto w-9/12 relative px-7 py-6 bg-gray-900 ring-4 ring-grey-900 border-8 rounded-full leading-none flex items-top justify-center space-x-6">
-        <p class="text-2xl md:text-2xl lg:text-8xl font-extrabold text-white">
+        <p class="text-2xl md:text-2xl lg:text-[2.75rem] font-extrabold text-white">
 
           {{ footprint }}
           <span :class="'text-' + this.changeImage().color + '-500'">{{ footprintUnit }} de C0<span
@@ -28,9 +30,9 @@ export default {
     return {
       nbrRequest: localStorage.getItem("nbrRequest") || 0,
       requestSize: localStorage.getItem("requestSizeValue") || 0,
-      requestSizeUnit: localStorage.getItem("requestSizeUnit") || 0,
+      requestSizeUnit: localStorage.getItem("requestSizeUnit") || '',
       footprint: localStorage.getItem("footprintValue") || 0,
-      footprintUnit: localStorage.getItem("footprintUnit") || 0,
+      footprintUnit: localStorage.getItem("footprintUnit") || '',
     };
   },
   created() {
