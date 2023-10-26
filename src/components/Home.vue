@@ -8,7 +8,7 @@
       de
       données
     </h1>
-    <!-- <conversionPopup :footprint="footprint" /> -->
+    <conversionPopup :footprint="footprint" :footprintUnit="footprintUnit" />
     <div class="relative group mt-8 mx-10 w-9/12">
       <div
         :class="'w-9/12 absolute -inset-1 bg-' + this.changeImage().color + ' bg-animate p-10 rounded-full filter blur-lg sm:mx-auto'" />

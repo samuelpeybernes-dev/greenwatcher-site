@@ -1,10 +1,10 @@
 <template>
   <navbar style="height: 12%;" />
-  <router-view style="height: 80%; display: flex;
+  <router-view style="height: 86%; display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;" />
-  <foooter style="height: 8%;" />
+  <foooter style="height: 2%;" />
 </template>
 
 <script >

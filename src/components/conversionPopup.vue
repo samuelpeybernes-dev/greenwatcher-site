@@ -10,33 +10,39 @@
                     <section id="Séminaires">
                         <article class="big_circle">
 
-                            <div class="rounded-2xl	circle top_center"><img class="w-10"
+                            <div class="rounded-2xl	circle top_center">
+                                <img class="w-10"
                                     src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f697.svg" alt="">
+                                <p>{{ this.car }} km</p>
                                 <div class="border"></div>
                             </div>
 
                             <div class="rounded-2xl	circle right_top show_circle"><img class="w-10"
                                     src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4a7.svg" alt="">
+                                <p>{{ this.water }} L</p>
                                 <div class="border"></div>
                             </div>
 
                             <div class="rounded-2xl	circle right_bottom"><img class="w-10"
                                     src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f969.svg" alt="">
+                                <p>{{ this.meat }} kg</p>
                                 <div class="border"></div>
                             </div>
 
                             <div class="rounded-2xl	circle left_bottom"><img class="w-10"
                                     src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f456.svg" alt="">
+                                <p>{{ this.jean }} jeans</p>
                                 <div class="border"></div>
                             </div>
 
                             <div class="rounded-2xl	circle left_top"><img class="w-10"
                                     src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f685.svg" alt="">
+                                <p>{{ this.train }} km</p>
                                 <div class="border"></div>
                             </div>
                             <h1
                                 class="flex items-center h-full justify-center text-center mb-4 text-1xl font-extrabold leading-none tracking-tight text-gray-900 md:text-2xl lg:text-2xl dark:text-black">
-                                <span class="contents text-[#8d6c9f]">{{ footprint }}</span> de C0<span
+                                <span class="contents text-[#8d6c9f]">{{ footprint }}</span> {{ footprintUnit }} de C0<span
                                     style="display: contents;vertical-align: -20px;font-size: 70%;">2</span> <br> correspond
                                 à
                             </h1>
@@ -59,6 +65,10 @@ export default {
             type: Number,
             default: 0,
         },
+        footprintUnit: {
+            type: String,
+            default: '',
+        },
     },
     data() {
         return {
@@ -80,25 +90,28 @@ export default {
                 this.meat = 0.03;
                 this.water = 0.9;
             } else if (this.footprint >= 25 && this.footprint < 50) {
-                this.car = 1.2;
-                this.train = 106;
-                this.jean = 0.01;
-                this.meat = 0.03;
-                this.water = 0.9;
+                this.car = 2.3;
+                this.train = 212;
+                this.jean = 0.02;
+                this.meat = 0.07;
+                this.water = 1.9;
             } else if (this.footprint >= 50 && this.footprint < 75) {
-                this.car = 1.2;
-                this.train = 106;
-                this.jean = 0.01;
-                this.meat = 0.03;
-                this.water = 0.9;
+                this.car = 3.5;
+                this.train = 318;
+                this.jean = 0.03;
+                this.meat = 0.1;
+                this.water = 2.8;
             } else if (this.footprint >= 75) {
-                this.car = 1.2;
-                this.train = 106;
-                this.jean = 0.01;
-                this.meat = 0.03;
-                this.water = 0.9;
+                this.car = 4.6;
+                this.train = 424;
+                this.jean = 0.04;
+                this.meat = 0.1;
+                this.water = 3.7;
             }
         },
+    },
+    created() {
+        this.footprintConversion();
     },
 
 }
@@ -145,6 +158,7 @@ export default {
     background: #EFF4F9;
     transition: 0.3s;
     transition-delay: 0.2s;
+    flex-direction: column;
 }
 
 #Séminaires .big_circle {
