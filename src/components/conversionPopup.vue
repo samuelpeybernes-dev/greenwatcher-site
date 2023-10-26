@@ -6,26 +6,26 @@
 
         <v-dialog v-model="dialog" width="40%">
             <v-card>
-                <v-card-text>
+                <v-card-text style="padding: 7%">
                     <section id="Séminaires">
                         <article class="big_circle">
 
                             <div class="rounded-2xl	circle top_center">
                                 <img class="w-10"
                                     src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f697.svg" alt="">
-                                <p>{{ this.car }} km</p>
+                                <p>{{ this.car }} km en voiture</p>
                                 <div class="border"></div>
                             </div>
 
                             <div class="rounded-2xl	circle right_top show_circle"><img class="w-10"
                                     src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4a7.svg" alt="">
-                                <p>{{ this.water }} L</p>
+                                <p>{{ this.water }} L d'eau</p>
                                 <div class="border"></div>
                             </div>
 
                             <div class="rounded-2xl	circle right_bottom"><img class="w-10"
                                     src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f969.svg" alt="">
-                                <p>{{ this.meat }} kg</p>
+                                <p>{{ this.meat }} kg de viande</p>
                                 <div class="border"></div>
                             </div>
 
@@ -37,7 +37,7 @@
 
                             <div class="rounded-2xl	circle left_top"><img class="w-10"
                                     src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f685.svg" alt="">
-                                <p>{{ this.train }} km</p>
+                                <p>{{ this.train }} km en train</p>
                                 <div class="border"></div>
                             </div>
                             <h1
@@ -153,12 +153,17 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90px;
-    height: 90px;
+    width: 27%;
+    height: 27%;
     background: #EFF4F9;
     transition: 0.3s;
     transition-delay: 0.2s;
     flex-direction: column;
+}
+
+#Séminaires .circle p {
+    text-align: center;
+    font-size: 0.8rem;
 }
 
 #Séminaires .big_circle {
