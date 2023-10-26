@@ -51,7 +51,7 @@
                     </section>
                 </v-card-text>
                 <v-card-actions>
-                    <v-btn color="primary" block @click="dialog = false">Fermer</v-btn>
+                    <v-btn color="#5cbc9d" block @click="dialog = false">Fermer</v-btn>
                 </v-card-actions>
             </v-card>
         </v-dialog>
