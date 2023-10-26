@@ -8,6 +8,7 @@
       de
       données
     </h1>
+    <conversionPopup :footprint="footprint" />
     <div class="relative group mt-8 mx-10 w-9/12">
       <div
         :class="'w-9/12 absolute -inset-1 bg-' + this.changeImage().color + ' bg-animate p-10 rounded-full filter blur-lg sm:mx-auto'" />
@@ -25,7 +26,11 @@
 </template>
   
 <script >
+import conversionPopup from "./conversionPopup.vue";
 export default {
+  components: {
+    conversionPopup
+  },
   data() {
     return {
       nbrRequest: localStorage.getItem("nbrRequest") || 0,
@@ -35,7 +40,7 @@ export default {
       footprintUnit: localStorage.getItem("footprintUnit") || '',
     };
   },
-  created() {
+  beforeCreate() {
     // Vérifier si les paramètres sont présents dans l'URL
     if (this.$route.query.footprint !== undefined && this.$route.query.requestSize !== undefined && this.$route.query.nbrRequest !== undefined) {
       this.nbrRequest = this.$route.query.nbrRequest;
