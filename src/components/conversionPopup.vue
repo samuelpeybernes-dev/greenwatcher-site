@@ -14,19 +14,19 @@
                             <div class="rounded-2xl	circle top_center">
                                 <img class="w-10"
                                     src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f697.svg" alt="">
-                                <p>{{ (this.footprint * 4.5).toFixed(2) }} km en voiture</p>
+                                <p>{{ (this.footprint * 0.45).toFixed(2) }} km en voiture</p>
                                 <div class="border"></div>
                             </div>
 
                             <div class="rounded-2xl	circle right_top show_circle"><img class="w-10"
                                     src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4a7.svg" alt="">
-                                <p>{{ (this.footprint * 3.7).toFixed(2) }} L d'eau</p>
+                                <p>{{ (this.footprint * 0.37).toFixed(2) }} L d'eau</p>
                                 <div class="border"></div>
                             </div>
 
                             <div class="rounded-2xl	circle right_bottom"><img class="w-10"
                                     src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f969.svg" alt="">
-                                <p>{{ (this.footprint * 0.138).toFixed(3) }} kg de viande</p>
+                                <p>{{ (this.footprint * 0.0138).toFixed(3) }} kg de viande</p>
                                 <div class="border"></div>
                             </div>
 
