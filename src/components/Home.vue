@@ -3,8 +3,8 @@
     <img class="mx-auto w-25" :src="changeImage().image" alt="Logo" />
     <h1
       class="text-center mb-4 text-1xl font-extrabold leading-none tracking-tight text-gray-900 md:text-2xl lg:text-2xl dark:text-black">
-      Vous avez déclenché <span class="text-[#8d6c9f]  dark:text-[#8d6c9f]">{{ nbrRequest }}</span> requêtes ce qui
-      représente <span class="text-[#8d6c9f] dark:text-[#8d6c9f]-500">{{ requestSize }}</span> {{ requestSizeUnit }}
+      Vous avez déclenché <span class="text-[#8d6c9f]  dark:text-[#8d6c9f]">{{ nbrRequest }}</span> requêtes représentent
+      <span class="text-[#8d6c9f] dark:text-[#8d6c9f]-500">{{ requestSize }}</span> {{ requestSizeUnit }}
       de
       données
     </h1>
