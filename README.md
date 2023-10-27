@@ -1,30 +1,29 @@
-# greenWatcher
+# 📌 Overview
 
-This template should help get you started developing with Vue 3 in Vite.
+Greenwatcher-site is a project that utilizes essential dependencies like Vue, Vuetify, Axios, Chart.js, and Tailwind CSS to create a visually appealing and user-friendly website for monitoring and analyzing personal C02 data consumption.
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
+## 🚀 Run Locally
+1.Clone the greenwatcher-site repository:
 ```sh
+git clone https://github.com/samuelpeybernes-dev/greenwatcher-site
+```
+2.Install the dependencies with one of the package managers listed below:
+```bash
+pnpm install
+bun install
 npm install
+yarn install
 ```
-
-### Compile and Hot-Reload for Development
-
-```sh
+3.Start the development mode:
+```bash
+pnpm dev
+bun dev
 npm run dev
+yarn dev
 ```
 
-### Compile and Minify for Production
+## ☁️ Deploy
 
-```sh
-npm run build
-```
-# greenwatcher-site
+`[GreenWatcher](https://greenwatcher.vercel.app/)`
+
+
